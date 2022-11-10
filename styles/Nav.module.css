@@ -1,0 +1,30 @@
+.nav{
+  height: 100%; /* 100% Full-height */
+  width: 20vw; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right:0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  text-align: right;
+  padding-top:25%;
+  background-color: rgba(0,0,0,0);
+  }
+  .nav li{
+    margin-bottom: 10%;
+    list-style: none;
+    font-size: 1.5rem;
+    transition: 250ms;
+  }
+  
+  .nav li:hover{
+    transform: translateX(-5%);
+    font-size: 2rem;
+    margin-bottom: 10%;
+    list-style: none;
+    font-weight:bold;
+  }
+  .nav a{
+    text-decoration: none;
+    color: white;
+  }

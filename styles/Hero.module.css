@@ -1,0 +1,11 @@
+.hero{
+  min-height: 100vh;
+  width: 100%;
+  padding-top:25%;
+}
+
+.hero  .heroText{
+    padding-left: 5%;
+    padding-right:5%;
+  }
+  
