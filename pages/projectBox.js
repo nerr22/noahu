@@ -7,11 +7,11 @@ function ProjectBox(props) {
     if (showModal) {
         return (
             <>
-            <ProjectModal title={props.title} handleClick={setShowModal}/>
             <div onClick={()=>setShowModal(true)} className={styles.projectBox}>
                 <h1 className={styles.header}>{props.title}</h1>
                 <h3 className={styles.descriptionShort}>{props.descriptionShort}</h3>
             </div>
+            <ProjectModal title={props.title} fullDescription={props.descriptionFull} handleClick={setShowModal}/>
             </>
           )
     } else {

@@ -15,13 +15,41 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
-        <Hero/>
-        <ContentBox id={'technology'} title={'Technology'} backgroundColor={'#014709'}/>
-        <ContentBox id={'healthcare'} title={'HealthCare'} backgroundColor={'#034007'}/>
-        <ContentBox id={'biology'} title={'Biology'} backgroundColor={'#014709'}/>
-        <ContentBox id={'hobbies'} title={'Hobbies'} backgroundColor={'#003804'}/>
+        <Hero />
+        <ContentBox
+          id={"lifeSci"}
+          title={"Life Sciences"}
+          flavorTitle={"Relevant Work"}
+          backgroundImage={
+            "https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+          }
+        />
+        <ContentBox
+          id={"ML"}
+          title={"Machine Learning & AI"}
+          flavorTitle={"Languages & Projects"}
+          backgroundImage={
+            "https://images.unsplash.com/photo-1566443280617-35db331c54fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+          }
+        />
+        <ContentBox
+          id={"webDev"}
+          title={"Web Development"}
+          flavorTitle={"Favorite Frameworks"}
+          backgroundImage={
+            "https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
+          }
+        />
+        <ContentBox
+          id={"other"}
+          title={"Other Interests"}
+          flavorTitle={"Cool Stuff"}
+          backgroundImage={
+            "https://images.unsplash.com/photo-1559627755-42212e5c5fdf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80"
+          }
+        />
       </div>
-      <Nav/>
+      <Nav />
       <footer className={styles.footer}></footer>
     </div>
   );

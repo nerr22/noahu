@@ -8,6 +8,7 @@ function ProjectModal(props) {
       <div onClick={()=>props.handleClick(false)} className={styles.overlay}>
         <div className={styles.modal}>
           <h1 className={styles.modalHeader}>{props.title}</h1>
+          <h3 className={styles.fullDescription}>{props.fullDescription}</h3>
         </div>
         </div>
     </div>

@@ -6,8 +6,9 @@ function ContentBox(props) {
     <div
       id={props.id}
       className={styles.contentBox}
-      style={{ backgroundColor: props.backgroundColor }}
+      style={{ backgroundImage: "url(" + props.backgroundImage + ")"}}
     >
+    <div className={styles.contentOverlay}>
       <h1 className={styles.contentBoxHeader}>{props.title}</h1>
       <h2 className={styles.contentBoxContent}>
         Irure aliquip id proident ex pariatur commodo minim. Velit veniam sit
@@ -17,7 +18,7 @@ function ContentBox(props) {
         esse cupidatat culpa. Ut magna nostrud anim proident mollit adipisicing
         proident quis occaecat.
       </h2>
-      <h3 className={styles.projectsHeader}>My Projects</h3>
+      <h3 className={styles.projectsHeader}>{props.flavorTitle}</h3>
       <div className={styles.contentBoxProjects}>
         <ProjectBox
           title={"Drug Repurposing"}
@@ -31,6 +32,7 @@ function ContentBox(props) {
         <ProjectBox title={"Hello World!"} />
         <ProjectBox title={"Hello World!"} />
         <ProjectBox title={"Hello World!"} />
+      </div>
       </div>
     </div>
   );

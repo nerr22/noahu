@@ -5,6 +5,16 @@
     padding-right:5%;
     padding-top: 15%;
 }
+.contentOverlay{
+    border-radius: 5px;
+    background: rgba(27, 35, 41, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 10%;
+}
 .projectsHeader{
     text-decoration: underline;
 }
