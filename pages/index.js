@@ -25,16 +25,16 @@ export default function Home() {
           }
         />
         <ContentBox
-          id={"ML"}
-          title={"Machine Learning & AI"}
+          id={"software"}
+          title={"Machine Learning and WebDev"}
           flavorTitle={"Languages & Projects"}
           backgroundImage={
             "https://images.unsplash.com/photo-1566443280617-35db331c54fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
           }
         />
         <ContentBox
-          id={"webDev"}
-          title={"Web Development"}
+          id={"healthcare"}
+          title={"Digital Health"}
           flavorTitle={"Favorite Frameworks"}
           backgroundImage={
             "https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
