@@ -1,12 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Nav from "./nav";
-import Hero from "./hero";
-import ContentBox from "./contentBox";
+import Nav from "../components/nav"
+import Hero from "../components/hero";
+import ContentBox from "../components/contentBox";
 import Router from "next/router";
+import projects from "../projects/projects";
+import {useState, useEffect} from 'react';
+
 
 export default function Home() {
+
+  // load projects
   return (
     <div className={styles.app}>
       <Head>
@@ -15,11 +20,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
-        <Hero />
+        <Hero id={'/'}/>
         <ContentBox
           id={"lifeSci"}
           title={"Life Sciences"}
+          content={
+            `I absolutely love solving challenges in the life sciences. I got my start co-founding Abyssinia Bio with my best friend out of undergrad. Since then I've had the pleasure of working with amazing folks from companies like J&J, Abbvie, Astrazenca, Sanofi, UCB, and many more. Considering the human ome-ome is finite (very large, but still finite) I'm obsessed with the idea that with a scalable platform for automated phenotyping, we should be able to solve all of the worlds NON-LIFESTYLE health problems within a decade.`          }
           flavorTitle={"Relevant Work"}
+          fontColor={'white'}
+          projects={projects.lifesci}
           backgroundImage={
             "https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
           }
@@ -27,7 +36,10 @@ export default function Home() {
         <ContentBox
           id={"software"}
           title={"Machine Learning and WebDev"}
+          content={"Natural language processing is the shit. I remember working with a group of scientists to hand-label a set of clinical notes in the oncology space and thining, wow this sucks. I left the company a few weeks later, wrote my first python library for heuristic language labeling, and was able to label around 10,000,000 sentences overnight for a compelex NER and relationship analysis model. While my favorite work is in ML, I'm also an adept yet inefficient full-stack developer who loves to build interfaces for people to interact with my models. "}
           flavorTitle={"Languages & Projects"}
+          fontColor={"white"}
+          projects={projects.software}
           backgroundImage={
             "https://images.unsplash.com/photo-1566443280617-35db331c54fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
           }
@@ -35,7 +47,9 @@ export default function Home() {
         <ContentBox
           id={"healthcare"}
           title={"Digital Health"}
+          content={"The logical overlap of my life-sciences and software work is digital health. Digital health is severly over-hyped and has been one of the biggest letdowns since pizza hut stopped serving up playstation demo discs with their smoking hot 'zas. My goal is to combine my data-driven dilligence from drug discovery with my passion for building models and interfaces to build a truly next-generation digital health platform that not only accelerates R&D, but makes healthcare free (or at least cheaper) in the process. Check it out below"}
           flavorTitle={"Favorite Frameworks"}
+          projects={projects.healthcare}
           backgroundImage={
             "https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
           }
@@ -43,7 +57,9 @@ export default function Home() {
         <ContentBox
           id={"other"}
           title={"Other Interests"}
+          content={"Outside of work I love playing disc golf, surfing, rock climbing, playing dungeons and dragons, cooking (stovetop all day, no baking), and playing music (banjo and bluegrass guitar all day <3)"}
           flavorTitle={"Cool Stuff"}
+          projects={projects.other}
           backgroundImage={
             "https://images.unsplash.com/photo-1559627755-42212e5c5fdf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80"
           }

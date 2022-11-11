@@ -1,5 +1,5 @@
 .projectBox{
-    border:1px solid rgba(0,0,0,.2);
+    background-color:rgba(0,0,0,.2);
     border-radius: 5px;
     height: auto;
     width: 200px;
@@ -11,7 +11,7 @@
 }
 .projectBox:hover{
     padding: 1%;
-    border:1px solid rgba(0,0,0,.6);
+    background-color:rgba(0,0,0,.6);
     border-radius: 5px;
     height: 200px;
     width: 500px;
@@ -22,9 +22,11 @@
 }
 .descriptionShort{
     font-size: .9rem;
+    font-weight: 400;
 }
 .descriptionFull{
     font-size: .9rem;
+    font-weight: 400;
 }
 .projectBox:hover .descriptionShort{
     display:none;
