@@ -1,4 +1,5 @@
 import styles from "../styles/ContentBox.module.css";
+import ProjectBox from "./projectBox";
 
 function ContentBox(props) {
   return (
@@ -18,12 +19,18 @@ function ContentBox(props) {
       </h2>
       <h3 className={styles.projectsHeader}>My Projects</h3>
       <div className={styles.contentBoxProjects}>
-        <div className={styles.project}>
-
-        </div>
-        <div className={styles.project}>
-            
-            </div>
+        <ProjectBox
+          title={"Drug Repurposing"}
+          descriptionShort={
+            "Amet exercitation labore exercitation culpa tempor est eu esse eiusmod."
+          }
+          descriptionFull={
+            "Et aliquip nulla amet magna aute. Magna irure sint aliqua laborum. Proident nulla anim nulla ut nisi sint excepteur. Pariatur eu elit officia id aliquip nostrud. Aute ea irure Lorem nisi ex anim nostrud. Nulla cupidatat ea ea ex duis nostrud ullamco Lorem nisi nulla amet pariatur exercitation est. Qui pariatur eiusmod occaecat minim labore deserunt ad eu pariatur Lorem ea cupidatat nisi laborum. Labore ipsum elit ad sunt incididunt et cupidatat eiusmod culpa."
+          }
+        />
+        <ProjectBox title={"Hello World!"} />
+        <ProjectBox title={"Hello World!"} />
+        <ProjectBox title={"Hello World!"} />
       </div>
     </div>
   );

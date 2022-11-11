@@ -16,10 +16,10 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <Hero/>
-        <ContentBox id={'technology'} title={'Technology'} backgroundColor={'red'}/>
-        <ContentBox id={'healthcare'} title={'HealthCare'} backgroundColor={'blue'}/>
-        <ContentBox id={'biology'} title={'Biology'} backgroundColor={'green'}/>
-        <ContentBox id={'hobbies'} title={'Hobbies'} backgroundColor={'purple'}/>
+        <ContentBox id={'technology'} title={'Technology'} backgroundColor={'#014709'}/>
+        <ContentBox id={'healthcare'} title={'HealthCare'} backgroundColor={'#034007'}/>
+        <ContentBox id={'biology'} title={'Biology'} backgroundColor={'#014709'}/>
+        <ContentBox id={'hobbies'} title={'Hobbies'} backgroundColor={'#003804'}/>
       </div>
       <Nav/>
       <footer className={styles.footer}></footer>

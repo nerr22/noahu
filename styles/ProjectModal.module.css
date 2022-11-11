@@ -1,0 +1,20 @@
+.overlay{
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: grayscale(1);
+    backdrop-filter: grayscale(1);
+}
+.modal{
+    height: 50vh;
+    width: 50vw;
+    background-color: white;
+    color: black;
+}

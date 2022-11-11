@@ -1,0 +1,31 @@
+.projectBox{
+    border:1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    height: 200px;
+    width: 200px;
+    transition:250ms;
+}
+.projectBox .descriptionFull{
+    display:none;
+}
+.projectBox:hover{
+    border:1px solid rgba(0,0,0,.6);
+    border-radius: 5px;
+    height: 200px;
+    width: 500px;
+}
+.projectBox .header{
+    font-size: 1.1rem;
+}
+.descriptionShort{
+    font-size: .9rem;
+}
+.descriptionFull{
+    font-size: .9rem;
+}
+.projectBox:hover .descriptionShort{
+    display:none;
+}
+.projectBox:hover .descriptionFull{
+    display: block;
+}

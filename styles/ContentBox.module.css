@@ -13,8 +13,3 @@
     flex-direction: row;
     gap: 5%;
 }
-.contentBox .project{
-    border:1px solid black;
-    height: 200px;
-    width: 200px;
-}
