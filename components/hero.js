@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import styles from "../styles/Hero.module.css";
 import { useState, useEffect } from "react";
 
@@ -104,17 +105,18 @@ function Hero() {
     "Allianchu",
     "Molweni",
   ];
-  const getGreeting = () => {
-    const randNumber = Math.round(Math.random() * greetings.length);
-    const randGreeting = greetings[randNumber];
-    setGreeting(randGreeting);
-  };
+
   useEffect(() => {
+    const getGreeting = () => {
+      const randNumber = Math.round(Math.random() * greetings.length);
+      const randGreeting = greetings[randNumber];
+      setGreeting(randGreeting);
+    };
     const interval = setInterval(() => {
       getGreeting();
     }, 2500);
     return () => clearInterval(interval);
-  }, []);
+  }, [greetings]);
   return (
     <div className={styles.hero}>
       <div className={styles.heroText}>
@@ -123,7 +125,7 @@ function Hero() {
           <span className={styles.greetingSpan}>{greeting}</span>
         </h1>
         <h2 className={styles.heroContent}>
-          I'm Noah. I like trying to solve un-solvable problems and understand things I'm too dumb to understand. My leadership, executive, and technical backgrounds span biotechnology, data science, software development, digital health, and social enterprise. I'm not really sure what else to write here but hopefully something comes to be before I push this to production... In the meantime, please take off your shoes and have a look around. 
+          I&apos;m Noah. I like trying to solve un-solvable problems and understand things I&apos;m too dumb to understand. My leadership, executive, and technical backgrounds span biotechnology, data science, software development, digital health, and social enterprise. I&apos;m not really sure what else to write here but hopefully something comes to be before I push this to production... In the meantime, please take off your shoes and have a look around. 
         </h2>
       </div>
     </div>
