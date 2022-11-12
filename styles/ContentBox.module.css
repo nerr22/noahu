@@ -13,11 +13,6 @@
     font-size: 1.1em;
     font-weight: 500;
 }
-.contentBackGround{
-    height: 100%;
-    width:100%;
-    z-index: -1;
-}
 .projectsHeader{
     text-decoration: underline;
 }

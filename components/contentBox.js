@@ -13,7 +13,7 @@ function ContentBox(props) {
     <div
       id={props.id}
       className={styles.contentBox}
-      style={{ backgroundImage: "url(" + props.backgroundImage + ")",color:props.fontColor}}
+      style={{ backgroundImage: "url(" + props.backgroundImage + ")",color:props.fontColor,backgroundSize:'cover',backgroundRepeat:"no-repeat	"}}
     >
     <div className={styles.contentOverlay}>
       <h1 className={styles.contentBoxHeader}>{props.title}</h1>
