@@ -57,7 +57,7 @@ export default function Home() {
         <ContentBox
           id={"other"}
           title={"Other Interests"}
-          content={"Outside of work I love playing disc golf, surfing, rock climbing, playing dungeons and dragons, cooking (stovetop all day, no baking), and playing music (banjo and bluegrass guitar all day <3)"}
+          content={"Outside of work I love playing disc golf, surfing, rock climbing, playing dungeons and dragons, cooking (stovetop all day, no baking), and playing banjo or guitar."}
           flavorTitle={"Cool Stuff"}
           projects={projects.other}
           backgroundImage={

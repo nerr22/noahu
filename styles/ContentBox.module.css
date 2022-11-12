@@ -20,7 +20,7 @@
 .contentBoxProjects{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 5% 5%;
     justify-content: center;
     
