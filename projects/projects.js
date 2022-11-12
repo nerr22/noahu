@@ -16,9 +16,9 @@ import thissite from './software/thissite'
 
 
 const projects = {
-    lifesci:[abyssinia,phaseIV,repurposing],
+    lifesci:[abyssinia,generics,repurposing],
     software:[tagger,domainAdaptation,computerVision,dataVis,thissite],
-    healthcare:[actually,generics,socialEnterprise],
+    healthcare:[actually,phaseIV,socialEnterprise],
     other:[]
 }
 

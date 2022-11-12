@@ -28,6 +28,8 @@
 @media (max-width: 600px) {
     .contentBoxProjects{
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0% 5%;
     }
 }

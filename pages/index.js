@@ -25,8 +25,8 @@ export default function Home() {
           id={"lifeSci"}
           title={"Life Sciences"}
           content={
-            `I absolutely love solving challenges in the life sciences. I got my start co-founding Abyssinia Bio with my best friend out of undergrad. Since then I've had the pleasure of working with amazing folks from companies like J&J, Abbvie, Astrazenca, Sanofi, UCB, and many more. Considering the human ome-ome is finite (very large, but still finite) I'm obsessed with the idea that with a scalable platform for automated phenotyping, we should be able to solve all of the worlds NON-LIFESTYLE health problems within a decade.`          }
-          flavorTitle={"Relevant Work"}
+            `I absolutely love solving challenges in the life sciences. I got my start co-founding Abyssinia Bio with my best friend out of undergrad. Since then I've had the pleasure of working with amazing companies like J&J, Abbvie, Astrazenca, Sanofi, UCB, Takeda, and many more. Considering the human ome-ome is finite (very large, but still finite) I'm obsessed with the idea, and truly believe, that a scalable platform for automated phenotyping could solve all of the worlds NON-LIFESTYLE health problems within a decade.`          }
+          flavorTitle={"I'm Proud of"}
           fontColor={'white'}
           projects={projects.lifesci}
           backgroundImage={
@@ -36,8 +36,8 @@ export default function Home() {
         <ContentBox
           id={"software"}
           title={"Machine Learning and WebDev"}
-          content={"Natural language processing is the shit. I remember working with a group of scientists to hand-label a set of clinical notes in the oncology space and thining, wow this sucks. I left the company a few weeks later, wrote my first python library for heuristic language labeling, and was able to label around 10,000,000 sentences overnight for a compelex NER and relationship analysis model. While my favorite work is in ML, I'm also an adept yet inefficient full-stack developer who loves to build interfaces for people to interact with my models. "}
-          flavorTitle={"Languages & Projects"}
+          content={"Natural language processing is the shit. I remember working with a group of scientists to hand-label a set of clinical notes in the oncology space and thining, wow this sucks, we should really be using a library like Snorkel. I left the company a few weeks later, wrote my first python library for heuristic language labeling, and was able to label around 10,000,000 sentences overnight for a compelex NER and relationship analysis model. While my favorite work is in ML, I'm also an adept yet inefficient full-stack developer who loves to build interfaces for people to interact with my models. "}
+          flavorTitle={"Things I've Built"}
           fontColor={"white"}
           projects={projects.software}
           backgroundImage={
@@ -48,7 +48,7 @@ export default function Home() {
           id={"healthcare"}
           title={"Digital Health"}
           content={"The logical overlap of my life-sciences and software work is digital health. Digital health is severly over-hyped and has been one of the biggest letdowns since pizza hut stopped serving up playstation demo discs with their smoking hot 'zas. My goal is to combine my data-driven dilligence from drug discovery with my passion for building models and interfaces to build a truly next-generation digital health platform that not only accelerates R&D, but makes healthcare free (or at least cheaper) in the process. Check it out below"}
-          flavorTitle={"Favorite Frameworks"}
+          flavorTitle={"I'm Excited About"}
           projects={projects.healthcare}
           backgroundImage={
             "https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"

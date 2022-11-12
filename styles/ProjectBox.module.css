@@ -34,3 +34,28 @@
 .projectBox:hover .descriptionFull{
     display: block;
 }
+@media (max-width: 600px) {
+    .projectBox{
+        background-color:rgba(0,0,0,.2);
+        border-radius: 5px;
+        height: auto;
+        width: 200px;
+        transition:250ms;
+        padding: 1%;
+        max-height: 200px;
+    }
+    .projectBox:hover{
+        padding: 1%;
+        background-color:rgba(0,0,0,.2);
+        border-radius: 5px;
+        height: 200px;
+        width: 200px;
+        cursor: pointer;
+    }
+    .projectBox:hover .descriptionShort{
+        display:block;
+    }
+    .projectBox:hover .descriptionFull{
+        display: none;
+    }
+}
