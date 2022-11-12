@@ -99,7 +99,6 @@ function Hero() {
     "Henda ho",
     "Choum Reap Sor",
     "Ayubowan",
-    "Salam Alaykum",
     "Li-hó",
     "Dumela",
     "Allianchu",
