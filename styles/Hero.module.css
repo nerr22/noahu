@@ -1,13 +1,16 @@
-.hero{
-  min-height: 100vh;
-  width: 100%;
-  padding-top:25%;
-}
+  .hero{
+    min-height: 100vh;
+    width: 100%;
+    padding-top:25%;
+  }
 
-.hero  .heroText{
-    font-size: 1em;
-    padding-left: 5%;
-    padding-right:5%;
+  .hero  .heroText{
+      font-size: 1em;
+      padding-left: 5%;
+      padding-right:5%;
+    }
+  .heroText h2{
+    font-weight: 500;
   }
   
   .greetingHand {
@@ -30,4 +33,22 @@
    50% { transform: rotate(10.0deg) }
    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
   100% { transform: rotate( 0.0deg) }
+}
+@media (max-width: 600px) {
+  .greetingHand {
+    font-size: 1.5em;
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  .greetingSpan {
+    font-size: 1.5em;
+  }
+  .hero  .heroText{
+    font-size: .9em;
+    padding-left: 5%;
+    padding-right:5%;
+  }
 }

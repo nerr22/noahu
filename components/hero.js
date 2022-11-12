@@ -123,7 +123,7 @@ function Hero() {
           <span className={styles.greetingSpan}>{greeting}</span>
         </h1>
         <h2 className={styles.heroContent}>
-          Hey, thanks for visiting. I'm Noah. I like trying to solve un-solvable problems and understand things I'm too dumb to understand. My executive and technical background spans biotechnology, data science, software development, digital health, and social enterprise. I'm not really sure what else to write here but hopefully something comes to be before I push this to production... In the meantime, please take off your shoes and have a look around. 
+          I'm Noah. I like trying to solve un-solvable problems and understand things I'm too dumb to understand. My executive and technical background spans biotechnology, data science, software development, digital health, and social enterprise. I'm not really sure what else to write here but hopefully something comes to be before I push this to production... In the meantime, please take off your shoes and have a look around. 
         </h2>
       </div>
     </div>

@@ -13,6 +13,7 @@
     backdrop-filter: grayscale(1);
 }
 .modal{
+  z-index: 2;
     height: 50vh;
     width: 50vw;
     background-color: white;
@@ -24,11 +25,32 @@
 .modal::-webkit-scrollbar {
     display: none;
   }
-  
   /* Hide scrollbar for IE, Edge and Firefox */
   .modal {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+  }
+  .descriptionFull{
+    font-weight:400;
+  }
+  .closeModal{
+    position: fixed;
+    font-size: 1em;
+    font-weight: bold;
+    color:rgba(0, 0, 0, 0.3);
+    top:21vh;
+    right:22vw;
+    transition:250ms;
+  }
+  .closeModal:hover{
+    font-size: 5em;
+    position: fixed;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    color:black;
+    top:21vh;
+    right:22vw;
   }
 @media (max-width: 600px) {
     .modal{

@@ -7,13 +7,14 @@ function ProjectModal(props) {
   let links
   if (props.links!==[]) {
     links = props.links.map((link)=>(<><Linkify key={link}><span className={styles.link}>{link}</span></Linkify><br/></>))
-  } else if (props.links===[]) {
+  } else if (props.links.length===0) {
     links = <p>No Links for this Project</p>
   }
   return (
     <div className={styles.projectModal}>
-      <div onClick={()=>props.handleClick(false)} className={styles.overlay}>
+      <div className={styles.overlay}>
         <div className={styles.modal}>
+        <span onClick={()=>props.handleClick(false)} className={styles.closeModal}>x</span>
           <h1 className={styles.modalHeader}>{props.title}</h1>
           <h3 className={styles.descriptionFull}>{props.descriptionFull}</h3>
           <h3>Links:</h3>

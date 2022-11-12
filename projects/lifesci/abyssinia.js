@@ -1,9 +1,9 @@
 const abyssinia = {
   title: "Abyssinia Biologics🧠",
   descriptionShort:
-    "preclinical development for diagnostic and therapeutic monoclonal antibodies",
+    "Leading the diagnostic and therapeutic pre-clinical development for a portfolio of anti-amyloid monoclonal antibodies",
   descriptionFull:
-    "Est sit cupidatat laboris Lorem. Occaecat aute deserunt dolore irure est irure consectetur quis mollit. Id excepteur officia reprehenderit eiusmod qui culpa Lorem incididunt quis id est. Laboris dolor deserunt consequat irure eiusmod adipisicing do ea deserunt consequat mollit. Ad nostrud ad in mollit adipisicing nisi duis nisi deserunt do velit labore tempor consequat. Nisi tempor ex mollit dolor ipsum labore do ex eu cillum consequat. Deserunt dolor irure Lorem incididunt quis officia.",
+    "The summer after I graduated from college, my best friend from elementary school asked me to join him on what would end up being a life-changing journey to commercialize some monoclonal antibodies his savant-father had developed in his attic laboratory. It took us a good couple years to get our feet under us but we've landed high-profile collaborators in the academic and pharmaceutical space, raised funding from angels, and are hopefully bringing the most effective Alzheimer's diagnostics and treatments that have ever existed to millions of people around the world. We've come so far, building a robust IP portfolio, an incredible team of diverse advisors, and many friendships along the way. It was the steepest learning curve I've ever experienced, learning enough neuroscience and immunology to not sound like a doofus every day was both incredibly humbling, and confidence building at the same time. ",
   links:["https://www.aby-bio.com","https://www.biospace.com/article/releases/abyssinia-biologics-debuts-data-on-ultra-sensitive-plasma-immunoassay-for-key-synaptotoxin-in-alzheimer-s-disease-pathogenesis/"]
 };
 export default abyssinia;

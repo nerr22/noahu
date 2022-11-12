@@ -11,12 +11,13 @@ import computerVision from './software/computerVision'
 import domainAdaptation from './software/domainAdaptation'
 import dataVis from './software/dataVis';
 import tagger from './software/tagger'
+import thissite from './software/thissite'
 
 
 
 const projects = {
     lifesci:[abyssinia,phaseIV,repurposing],
-    software:[tagger,domainAdaptation,computerVision,dataVis],
+    software:[tagger,domainAdaptation,computerVision,dataVis,thissite],
     healthcare:[actually,generics,socialEnterprise],
     other:[]
 }

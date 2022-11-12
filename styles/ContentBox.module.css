@@ -20,8 +20,10 @@
 .contentBoxProjects{
     display: flex;
     flex-direction: row;
-    gap: 5%;
+    flex-wrap: wrap;
+    gap: 5% 5%;
     justify-content: center;
+    
 }
 @media (max-width: 600px) {
     .contentBoxProjects{
