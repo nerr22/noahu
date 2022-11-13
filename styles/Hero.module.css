@@ -60,6 +60,9 @@
     min-height: 100vh;
     width: 100%;
     padding-top: 50%;
+    background-image: url('/noah-favicon.png');
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.99);
   }
 }
   @media (min-width: 1280px) {
