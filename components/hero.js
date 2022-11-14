@@ -124,7 +124,7 @@ function Hero() {
           <span className={styles.greetingSpan}>{greeting}</span>
         </h1>
         <h2 className={styles.heroContent}>
-          I&apos;m Noah. I like trying to solve un-solvable problems and understand things I&apos;m too dumb to understand. My leadership, executive, and technical backgrounds span biotechnology, data science, software development, digital health, and social enterprise. I&apos;m not really sure what else to write here but hopefully something comes to be before I push this to production... In the meantime, please take off your shoes and have a look around. 
+          I&apos;m Noah.  I&apos;m a co-founder at Abyssinia Bio and the founder at Actually Health. I like trying to solve un-solvable problems and understand things I&apos;m too dumb to understand. My leadership, executive, and technical backgrounds span business strategy, biotechnology, data science, software development, digital health, and social enterprise. I&apos;ve led and collaborated with multidisciplinary teams in academia, government, and fortune 10 healthcare. Scroll down to see what I&apos;m getting up to.  
         </h2>
       </div>
     </div>

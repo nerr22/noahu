@@ -17,7 +17,7 @@ function ProjectModal(props) {
         <span onClick={()=>props.handleClick(false)} className={styles.closeModal}>x</span>
           <h1 className={styles.modalHeader}>{props.title}</h1>
           <h3 className={styles.descriptionFull}>{props.descriptionFull}</h3>
-          <h3>Links:</h3>
+          <p><strong>Relevant Links</strong>:</p>
           {links}
         </div>
         </div>

@@ -7,7 +7,7 @@
   right:0;
   overflow-x: hidden; /* Disable horizontal scroll */
   text-align: center;
-  padding-top:25%;
+  padding-top:15%;
   background-color: rgba(0,0,0,0);
   }
   .nav li{
@@ -72,5 +72,8 @@
       }
       .nav li:hover a{
         color: black;
+      }
+      .contact{
+        display: none;
       }
   }

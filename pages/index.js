@@ -24,7 +24,7 @@ export default function Home() {
           id={"lifeSci"}
           title={"Life Sciences"}
           content={
-            `I absolutely love solving challenges in the life sciences. I got my start co-founding Abyssinia Bio with my best friend out of undergrad. Since then I've had the pleasure of working with amazing companies like J&J, Abbvie, Astrazenca, Sanofi, UCB, Takeda, and many more. Considering the human ome-ome is finite (very large, but still finite) I'm obsessed with the idea, and truly believe, that a scalable platform for automated phenotyping could solve all of the worlds NON-LIFESTYLE health problems within a decade.`          }
+            `I absolutely love solving challenges in the life sciences. I got my start co-founding Abyssinia Bio with my best friend out of undergrad. Since then I've had the pleasure of working with amazing companies like J&J, UnitedHealth, Mayo Clinic, Astrazeneca, Genentech, UCB, Takeda, and many more. Considering the human ome-ome is finite (very large, but still finite), I'm obsessed with the idea, and truly believe, that a scalable platform for automated phenotyping could solve all of the worlds NON-LIFESTYLE health problems within a decade.`          }
           flavorTitle={"I'm Proud of"}
           fontColor={'white'}
           projects={projects.lifesci}
@@ -35,7 +35,7 @@ export default function Home() {
         <ContentBox
           id={"software"}
           title={"Machine Learning, Data Science, and WebDev"}
-          content={"Natural language processing is the shit. I remember working with a group of scientists to hand-label a set of clinical notes in the oncology space and thining, wow this sucks, we should really be using a library like Snorkel. I left the company a few weeks later, wrote my first python library for heuristic language labeling, and was able to label around 10,000,000 sentences overnight for a compelex NER and relationship analysis model. While my favorite work is in ML, I'm also an adept yet inefficient full-stack developer who loves to build interfaces for people to interact with my models. "}
+          content={"Natural language processing is the shit. My first real experience with the scalability of software was during the early-abyssinia days when I was reading as much as I could about biotech markets, business theory, neuro, and immunology. I wanted a better way to triage and ingest information so the first scripts I ever wrote were built to take in books and summarize them with the classic tfidf sentence weighting. I'd dump my summaries to .txt and use a third party application to play them as abridged e-books --take that blinkist you dorks. While my favorite work is in ML, I'm also an adept yet inefficient full-stack developer who loves to build interfaces for people to interact with my models. "}
           flavorTitle={"Things I've Built"}
           fontColor={"white"}
           projects={projects.software}
@@ -55,9 +55,9 @@ export default function Home() {
         />
         <ContentBox
           id={"other"}
-          title={"Other Interests"}
-          content={"Outside of work I love playing disc golf, surfing, rock climbing, playing dungeons and dragons, cooking (stovetop all day, no baking), and playing banjo or guitar."}
-          flavorTitle={"Cool Stuff"}
+          title={"General Business & Random Stuff"}
+          content={"When I'm not directly working on something, most of my time is spent studying business or reading. My favorite reads have recently centered around the genesis of the digital age. Paul Allen's 'Idea Man' is a highlight from the last few years and is a great read. Additionally I love playing disc golf, surfing, rock climbing, playing dungeons and dragons, cooking (stovetop all day, no baking), and playing banjo or guitar."}
+          flavorTitle={"Rambles"}
           projects={projects.other}
           backgroundImage={
             "https://images.unsplash.com/photo-1559627755-42212e5c5fdf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80"

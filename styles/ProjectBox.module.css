@@ -5,6 +5,7 @@
     width: 200px;
     transition:250ms;
     padding: 1%;
+    text-align: center;
 }
 .projectBox .descriptionFull{
     display:none;
