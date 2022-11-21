@@ -24,7 +24,7 @@ export default function Home() {
           id={"lifeSci"}
           title={"Life Sciences"}
           content={
-            `I absolutely love solving challenges in the life sciences. I got my start co-founding Abyssinia Bio with my best friend out of undergrad. Since then I've had the pleasure of working with amazing companies like J&J, UnitedHealth, Mayo Clinic, Astrazeneca, Genentech, UCB, Takeda, and many more. Considering the human ome-ome is finite (very large, but still finite), I'm obsessed with the idea, and truly believe, that a scalable platform for automated phenotyping could solve all of the worlds NON-LIFESTYLE health problems within a decade.`          }
+            `I absolutely love solving challenges in the life sciences. I got my start co-founding Abyssinia Bio with my best friend out of undergrad. Since then I've had the pleasure of working with amazing companies like J&J, UnitedHealth, Mayo Clinic, Astrazeneca, Genentech, UCB, Takeda, and many more. Considering the human ome-ome is finite (very large, but still finite), I'm obsessed with the idea, and truly believe, that a scalable platform for automated phenotyping could solve >80% of human health problems inside two decades.`          }
           flavorTitle={"I'm Proud of"}
           fontColor={'white'}
           projects={projects.lifesci}
