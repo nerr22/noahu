@@ -21,6 +21,7 @@
   
   .greetingHand {
     font-size: 2em;
+    display: inline-block;
     animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
     animation-duration: 2.5s;        /* Change to speed up or slow down */
     animation-iteration-count: infinite;  /* Never stop waving :) */
@@ -42,6 +43,7 @@
 @media (max-width: 600px) {
   .greetingHand {
     font-size: 1.5em;
+    display: inline-block;
     animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
     animation-duration: 2.5s;        /* Change to speed up or slow down */
     animation-iteration-count: infinite;  /* Never stop waving :) */
