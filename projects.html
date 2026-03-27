@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-root="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects · Noah Ullman</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body data-page="projects">
+
+<div id="site-nav"></div>
+
+<main>
+  <div class="page-intro">
+    <p>This is a running list of things I've worked on — some professional, some personal, some finished at 2am. I try to keep it updated. Some of these have code available, some of it is lost to the void. If anything catches your eye, <a href="mailto:noah.u22@gmail.com">hit me up</a> — I'm happy to share what I have.</p>
+  </div>
+
+  <!-- DIGITAL HEALTH -->
+  <section id="digital-health">
+    <div class="section-meta">
+      <span class="section-tag">Digital Health</span>
+      <div class="section-rule"></div>
+    </div>
+    <h2>Digital health has been<br>let down by hype.</h2>
+    <p>Massively over-indexed on novelty, under-indexed on rigor. My goal is to bring drug-discovery-level diligence to building care systems that actually work.</p>
+    <div class="projects">
+      <div class="project">
+        <div class="project-icon">🏥</div>
+        <div class="project-body">
+          <div class="project-title-row">
+            <h3>Actually Health</h3>
+            <span class="wip-chip">Work in progress</span>
+          </div>
+          <p>A continuous, closed-loop chronic and specialty care system with a proprietary clinical decision engine. The core thesis is that longitudinal data compounds in a way that episodic care structurally cannot — every new signal makes prior signals more meaningful, and the accumulated picture drives better clinical decisions over time. Most digital health companies optimize for the first encounter. Actually Health is built around what happens after the hundredth. Currently building, pre-launch, with a team that spans clinical medicine, AI, and growth.</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-icon">⌚</div>
+        <div class="project-body">
+          <div class="project-title-row">
+            <h3>The Future of Wearables</h3>
+            <span class="wip-chip">Work in progress</span>
+          </div>
+          <p>I've always been fascinated by how physiological signals are distributed across the body in ways most people never think about. Your heart isn't just beating in your chest -- its electrical activity propagates everywhere, all the time, waiting to be measured. The question I keep coming back to is: what if the hardware to do that measuring is already in everyone's pocket?
+            This project is about extracting clinically meaningful biomarkers from the sensors that a majority of the population already carries in their daily lives. I can't get into specifics because I'm pursuing patent protection, but the broad strokes involve pushing consumer hardware well past its intended operating envelope, a Raspberry Pi acting as a ground truth reference, and a learned transfer function that bridges the gap between the two. The signal processing rabbit hole goes deep.
+            The thing that drives me here isn't building a product, at least not yet. It's answering a more fundamental question: how much clinical signal is already being captured by devices we own, and simply thrown away by software that was never designed to look for it? I think the answer is going to surprise people.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFTWARE & ML -->
+  <section id="software">
+    <div class="section-meta">
+      <span class="section-tag">Machine Learning & Software</span>
+      <div class="section-rule"></div>
+    </div>
+    <h2>NLP before it was cool.👴</h2>
+    <p>My first scripts summarized books via TF-IDF so I could dump them to .txt and listen on my commute — take that Blinkist. It escalated from there. I'm also a full-stack developer, mostly building interfaces for people to interact with models.</p>
+    <div class="projects">
+      <div class="project">
+        <div class="project-icon">📚</div>
+        <div class="project-body">
+          <h3>NLP BookSum</h3>
+          <p>Built a local book summarization tool where I can upload EPUBs, parse them into chapter-level summaries, and pass specific points of interest to focus the output — anecdotes, analogies, conceptual frameworks, whatever is actually useful for understanding rather than just recalling. Running Llama 3 7B locally meant no API costs and no context window anxiety on long texts. The more interesting feature was talk-to-the-book: a RAG pipeline that lets you query salient sections of a book against something specific to your situation. Asking Andrew Chen's Cold Start Problem about a startup I was actually building produced advice that was noticeably higher resolution than base GPT — because the retrieval is grounding the generation in the author's actual reasoning rather than a lossy compression of it. To validate this properly, built an automated Q&A evaluation pipeline that scored the local RAG setup against the ChatGPT API on a set of book-derived questions. Local won. Not a surprise, but satisfying to have the number.</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-icon">🦾</div>
+        <div class="project-body">
+          <h3>Heuristic Tagging at Scale</h3>
+          <p>Training a useful model requires labeled data. Getting labeled data required either a lot of time or a lot of money, usually both. At least it did back in 2021 when I built this.</p>
+          <p>We were inspired by Snorkel's core insight: instead of hand-labeling thousands of records, write rules that label them for you. But we kept pulling on one thread. What if instead of writing the rules, you let the model figure out what the rules should be?</p>
+          <p>The result is a small tool we built for clinical NER. You seed it with terms you trust: a handful of drug names, a few diagnoses, some lab values. It labels a large corpus automatically using that dictionary, trains a fast model on those labels, then runs the model back over the same text asking a single question: where are you uncertain? Wherever the model thinks it's looking at something clinically meaningful but the dictionary is silent, that's a gap. The system surfaces those gaps ranked by confidence and frequency. You review, add what makes sense, and run again.</p>
+          <p>The kind of thing it's designed to catch: a model trained on "metformin" and "lisinopril" generalizing to flag "SGLT2 inhibitor" or "empagliflozin" as likely drug mentions before either term ever entered the dictionary. A model that learned "A1C" pointing you toward "glycated hemoglobin" and "HbA1c" on its own.</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-icon">🐱‍💻</div>
+        <div class="project-body">
+          <h3>Domain-Adapted Language Models</h3>
+          <p>Patients describe their health in ways that clinical corpora never trained on. "My chest feels tight when I walk upstairs" doesn't map cleanly to anything in PubMed.</p>
+          <p>We built a 10GB corpus of colloquial patient language, domain-adapted PubMedBioBERT on it, and hit state-of-the-art on a named entity recognition task using real-world patient-generated text. The labeling pipeline that made it possible was an early version of the tagging library above.</p>
+          <p>The model comparison tells you something real about where domain adaptation actually earns its keep. RoBERTa out of the box matched BioBERT on general tasks, which makes sense. Patient language is conversational and relatively plain English. But on NER for symptoms, diseases, and drugs, the domain-adapted model pulled ahead. Drug names are morphologically alien ("empagliflozin," "liraglutide"). Symptom descriptions blend colloquial and clinical vocabulary in ways general corpora don't cover. Disease mentions often appear as fragments or abbreviations that only resolve with medical context.</p>
+          <p>Domain adaptation is mostly neutral until you hit entity types with specialized surface forms, and then it matters a lot.</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-icon">🌊</div>
+        <div class="project-body">
+          <h3>Surf Swell Forecasting</h3>
+          <p>This was the first coding project I ever did and thusly holds a unique place in my heart. I scraped years of NOAA buoy data and wave height records to find the actual best surf windows along the New England coast. The existing forecasting apps treat swell period, height, and wind direction as equally weighted when they're not, especially in a region where the geography creates weird refraction effects. Built a personal model that weights the variables by what I know about specific breaks. "Just go in winter" turns out to be technically correct but operationally useless advice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIFE SCIENCES -->
+  <section id="life-sci">
+    <div class="section-meta">
+      <span class="section-tag">Life Sciences</span>
+      <div class="section-rule"></div>
+    </div>
+    <h2>I love biology.</h2>
+    <p>I got my start co-founding Abyssinia Bio out of undergrad. Since then I've worked with J&J, UnitedHealth, Mayo Clinic, AstraZeneca, Genentech, UCB, Takeda, and more.</p>
+    <div class="projects">
+      <div class="project">
+        <div class="project-icon">🧬</div>
+        <div class="project-body">
+          <h3>Abyssinia Biologics</h3>
+          <p>Co-founded out of undergrad to pursue pre-clinical diagnostic and therapeutic development for a portfolio of anti-amyloid monoclonal antibodies. The work started in a literal attic laboratory, driven by a core question: whether therapeutics could target amyloid aggregation earlier in the disease cascade than existing approaches. In collaboration with Dennis Selkoe's lab at Brigham and Women's Hospital, we characterized our lead antibodies across multiple media and benchmarked them against competing clinical-stage assets. The results demonstrated exceptional specificity and sensitivity to toxic Aβ conformations, distinguishing pathological oligomeric and protofibrillar species from inert monomeric amyloid with high fidelity. That selectivity profile was the foundation of the therapeutic thesis: intervening on the conformations that actually drive neurotoxicity, rather than bulk amyloid clearance.</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-icon">⚗️</div>
+        <div class="project-body">
+          <h3>Drug Repurposing via Hypergraph</h3>
+          <p>Built a hypergraph combining discrete drug features (mechanism, target class, indication history) with semantic embeddings from biomedical literature to identify repurposing candidates for rare Mendelian diseases. Nodes live in continuous embedding space while hyperedges encode higher-order feature overlap, capturing transitive multi-way relationships that pairwise similarity and standard knowledge graphs miss.</p>
+          <p>Scored candidates using three independent signals: embedding proximity, spectral coordinates from the normalized hypergraph Laplacian, and random-walk diffusion across hyperedge structure. Validated against known drug-disease pairs (indicated drugs ranked in the top 2.2nd percentile vs 50.5th for non-indicated, 23x enrichment). The system recovered lenalidomide as a top repurposing candidate for beta-thalassemia from first principles, a hypothesis with active clinical investigation based on CRBN-mediated fetal hemoglobin induction.</p>
+          <p>Data sourced from OpenTargets GraphQL API (200 drugs, 104 diseases, 2,106 hyperedges across 8 edge types). Embeddings via PubMedBERT sentence transformer.</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-icon">📊</div>
+        <div class="project-body">
+          <h3>Biomarker Imputation from Sparse EHR Data</h3>
+          <p>Longitudinal biomarker data in EHRs is almost always incomplete. Patients miss labs, monitoring cadences vary, and the gaps get worse for exactly the populations where continuity matters most. Using a cohort of ~9 million Mayo Clinic EHR patients, this project built imputation models for common cardiometabolic and CKD labs (creatinine, albumin, and others) by training on patients with high-resolution lab histories as ground truth. The feature set combined structured EHR signals: diagnosis codes, medication histories, vitals, procedure records, demographics, and temporal context like time since last encounter and lab ordering frequency. Predicting exact continuous values proved too noisy, but predicting clinically relevant ranges (normal, elevated, critically abnormal) worked well enough to reconstruct approximate biomarker trajectories across time. That made it possible to flag patients drifting toward high-risk ranges even when recent labs were missing.</p>
+        </div>
+      </div>
+  </section>
+
+  <!-- ABOUT / OTHER -->
+  <section id="other">
+    <div class="section-meta">
+      <span class="section-tag">Outside Work</span>
+      <div class="section-rule"></div>
+    </div>
+    <h2>Things that have nothing<br>to do with healthcare.</h2>
+    <div class="about-grid">
+      <div class="about-item">
+        <h4>Music</h4>
+        <p>Playing guitar and banjo, mostly for myself, sometimes for the cat. Fingerstyle, rarely percussive, eternally working on cleaner pull-offs.</p>
+      </div>
+      <div class="about-item">
+        <h4>In the Water</h4>
+        <p>Surfing, mostly in New England winters. My insulation situation handles it fine.</p>
+      </div>
+      <div class="about-item">
+        <h4>Gaming</h4>
+        <p>World of Warcraft Classic, Fury Warrior. Not ashamed. Kinda ashamed. Peep my DBS parses iykyk.</p>
+      </div>
+      <div class="about-item">
+        <h4>Cooking</h4>
+        <p>Stovetop only, experimental, no baking. Baking requires following rules and being literate.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="js/site.js" defer></script>
+</body>
+</html>
