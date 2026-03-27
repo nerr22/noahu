@@ -48,7 +48,7 @@
   function footerHtml() {
     return (
       '<footer>' +
-      '<p>Boston, MA &nbsp;·&nbsp; Actually Health &nbsp;·&nbsp; Ex RA Capital, nference & Aby Bio </p>' +
+      '<p>Boston, MA &nbsp;·&nbsp; Actually Health</p>' +
       '<a href="mailto:noah.u22@gmail.com">noah.u22@gmail.com</a>' +
       '</footer>'
     );
