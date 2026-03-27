@@ -1,15 +1,45 @@
 (function () {
-  var root = document.documentElement.getAttribute('data-root') || '';
   var page = document.body.getAttribute('data-page') || '';
+  var dataRoot = document.documentElement.getAttribute('data-root') || '';
+
+  /**
+   * GitHub project Pages: site lives at https://user.github.io/REPO/ (e.g. /noahu/).
+   * Custom domain (CNAME): served from / so paths are root-relative without the repo segment.
+   * Nav links must be absolute from host root so they work from /REPO/blog/... on github.io
+   * and from /blog/... on the apex domain.
+   */
+  /** Must match GitHub repo name for project Pages at user.github.io/REPO/ */
+  var GITHUB_PAGES_REPO = 'noahu';
+
+  function pathPrefix() {
+    if (location.protocol === 'file:') return null;
+    var host = location.hostname;
+    var path = location.pathname;
+    if (!host.endsWith('github.io')) return '';
+    var base = '/' + GITHUB_PAGES_REPO;
+    if (path === base || path.startsWith(base + '/')) {
+      return base;
+    }
+    return '';
+  }
+
+  /** e.g. blog/index.html -> /noahu/blog/index.html or /blog/index.html */
+  function absFromSiteRoot(rel) {
+    rel = rel.replace(/^\/+/, '');
+    var prefix = pathPrefix();
+    if (prefix === null) {
+      return dataRoot + rel;
+    }
+    return prefix ? prefix + '/' + rel : '/' + rel;
+  }
 
   function navHtml() {
-    var r = root;
     return (
       '<nav><ul>' +
-      '<li><a href="' + r + 'index.html" data-nav="home">Noah Ullman</a></li>' +
-      '<li><a href="' + r + 'projects.html" data-nav="projects">Projects</a></li>' +
-      '<li><a href="' + r + 'blog/index.html" data-nav="blog">Blog</a></li>' +
-      '<li><a href="' + r + 'reading.html" data-nav="reading">Reading</a></li>' +
+      '<li><a href="' + absFromSiteRoot('index.html') + '" data-nav="home">Noah Ullman</a></li>' +
+      '<li><a href="' + absFromSiteRoot('projects.html') + '" data-nav="projects">Projects</a></li>' +
+      '<li><a href="' + absFromSiteRoot('blog/index.html') + '" data-nav="blog">Blog</a></li>' +
+      '<li><a href="' + absFromSiteRoot('reading.html') + '" data-nav="reading">Reading</a></li>' +
       '<li><a href="mailto:noah.u22@gmail.com" class="contact-link">Contact</a></li>' +
       '</ul></nav>'
     );
