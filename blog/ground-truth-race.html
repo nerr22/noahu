@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ground Truth Race · Noah Ullman</title>
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body data-page="blog">
+
+<div id="site-nav"></div>
+
+<main>
+  <article class="post">
+    <header>
+      <h1>The Ground Truth Race</h1>
+      <p class="byline">April 2026</p>
+    </header>
+    <div class="prose">
+      <p>There is a land rush happening right now, and most people are watching the wrong map.</p>
+
+      <p>The popular narrative about AI is a story about models. Who has the biggest one, who trained it on the most data, who can make it reason or code or pass a bar exam. This framing is understandable because the models are genuinely impressive in ways that are easy to demonstrate. It mistakes the tool for the territory.</p>
+
+      <p>The real race is about ground truth. Who will own the continuously generating, self-refining datasets that represent reality in domains where text alone cannot.</p>
+
+      <h2>Where text is the territory</h2>
+
+      <p>Large language models are extraordinary at tasks where reality is already parameterized in text. Code is the clearest example. The world of software is made of text, the rules are written down, the feedback loops are tight. When an LLM writes code, its internal representation and the actual domain share the same medium. No translation loss.</p>
+
+      <p>Law works similarly. Legal reasoning happens in language, precedent is text, statutes are text. A model trained on enough of those words develops something close to native understanding. Certain areas of mathematics follow the same pattern, where formal proofs are symbolic sequences operating directly on the thing itself.</p>
+
+      <p>This is why LLMs feel like they are changing everything. In these domains, they are.</p>
+
+      <h2>Where text is a shadow</h2>
+
+      <p>A protein is not a paragraph. You can describe its structure, annotate its function, catalog its interactions, and researchers have been doing this for decades. The description is not the thing. The actual behavior of a protein involves physical forces, thermodynamic constraints, and context-dependent interactions that no text summary captures faithfully.</p>
+
+      <p>Medicine has the same problem. A patient's clinical state is not a collection of ICD-10 codes and lab values. Those are a shadow cast by something far more complex: a human body changing over time, responding to interventions, accumulating damage, compensating, adapting. The electronic health record captures fragments of this reality, filtered through billing incentives, documentation habits, and the 15-minute visit window.</p>
+
+      <p>Drug discovery, materials science, climate modeling, frontier physics. These are domains where the underlying reality operates in a medium fundamentally different from natural language. The information is not in the text because the text was never designed to contain it. You cannot extract signal that was never encoded.</p>
+
+      <p>Within these lossy domains, the physics of ownership differs. A ground truth dataset in chronic disease management compounds toward an understanding of the human body, which is not renegotiating its rules. A ground truth dataset in ad click behavior compounds toward a better snapshot of a system that is already changing under you. Both have value. The first has a ceiling set by actual laws of nature, and that ceiling does not move. The second is a claim on a moving target.</p>
+
+      <p>Epic Systems contains records of over 300 million patients. It is the largest repository of clinical data in the world, and it is almost entirely shadow. Every entry was created because a physician needed to document a billable encounter. The ICD-10 code captures the diagnosis that justified the visit. The lab value captures the single draw that happened to occur that day. The note captures whatever the doctor had time to type in the eleven minutes between patients. None of it was designed to capture what is actually happening inside a human body over time. A patient with Type 2 diabetes managed over a decade is represented in Epic as a sparse sequence of snapshots, each one filtered through the economics of the visit that produced it. Now consider a company that has been continuously monitoring that same patient for three years: glucose every five minutes, heart rate variability overnight, step count and sleep staging daily, with every medication change, dietary intervention, and symptom log timestamped and structured against a clinical ontology designed specifically to capture metabolic response. That is not more data. It is a different category of thing. One is a shadow cast by a healthcare system optimized for reimbursement. The other is ground truth about how a human body actually behaves. Epic's data advantage is real. It is also irrelevant to the race being described here.</p>
+
+      <h2>What changed</h2>
+
+      <p>For decades, owning good data was a competitive advantage bounded by the execution layer between having data and acting on it. Even with the best dataset, you needed analysts, engineers, and operators to turn it into decisions. A modest edge was usually sufficient because no one could capitalize on a larger one fast enough.</p>
+
+      <p>Two things collapsed that regime nearly simultaneously.</p>
+
+      <p>The tools for learning from data became dramatically more capable. Work that required a team of biostatisticians and months of effort can now be done by a well-prompted model with access to the right data. The execution layer compressed by an order of magnitude.</p>
+
+      <p>The tools for generating data became cheaper and more intentional. Lab automation, remote monitoring, digital biomarkers, continuous sensing. The cost of creating a new observation dropped, and the ability to design what you observe improved.</p>
+
+      <p>When the execution layer was thick, any edge was defensible. Now it is thin. Any edge that can be replicated will be replicated quickly. The only durable position is owning ground truth that cannot be replicated because you are the one generating it.</p>
+
+      <h2>The flywheel</h2>
+
+      <p>A company that generates ground truth through its own operations, uses that data to improve the models that guide those operations, and uses those improved models to generate higher-quality data, has built a flywheel. Each rotation makes the next rotation faster and more precise.</p>
+
+      <p>The critical property is that the data is not assembled from public sources, licensed from a broker, scraped, or aggregated. A health company managing chronic patients longitudinally, capturing symptoms, interventions, responses, and outcomes in a structured clinical ontology, is generating something that cannot be assembled any other way. A biotech company running its own assays and feeding outcomes back into target selection is doing the same thing in a different substrate. So is a logistics company operating its own fleet and iterating on its own planning models.</p>
+
+      <p>The flywheel is not a metaphor for getting better over time. It is a mechanism for generating ground truth that compounds. The compounding is the moat.</p>
+
+      <h2>Territorial claims</h2>
+
+      <p>In the lossy domains, AI systems will take one of two forms. A reasoning engine connected to a domain-specific data layer through structured interfaces, where the model's effectiveness is a direct function of the quality and depth of data it can reach. Or a world model trained on native domain representations, where protein structures replace text about proteins and physiological time series replace clinical notes.</p>
+
+      <p>In both architectures, the limiting resource is the same. The model is the engine. The data is the fuel. The fuel does not exist on the open internet. It must be generated.</p>
+
+      <p>This is the framing that matters. We are not in an era of data-driven competitive advantage. We are in an era of ground truth colonization.</p>
+
+      <p>The first company to own generalizable ground truth in drug target validation will be the substrate on which future drug discovery models are trained or evaluated. The first company to own longitudinal ground truth in chronic disease management will define what better means, because its dataset will be the reference against which all other approaches are measured.</p>
+
+      <p>The window is open now because the tools exist to build the flywheels and the flywheels have not matured in most domains. In five years, possibly less, the companies that started early will have datasets effectively impossible to replicate. Not because the methods are secret, but because the data is the accumulated output of years of operations that cannot be fast-forwarded.</p>
+
+      <p>The signal is straightforward. Find the domains where text is a lossy representation of reality. Find the companies in those domains building operational flywheels to generate proprietary ground truth. Ignore model size and funding. Ask two questions. Are they generating data no one else can generate? Does that data get better as they operate?</p>
+
+      <p>If the answer to both is yes, you are looking at a territorial claim being staked. The race is already underway. The territory is finite. Ground truth, once owned, does not get returned.</p>
+    </div>
+  </article>
+</main>
+
+<div id="site-footer"></div>
+<script src="../js/site.js" defer></script>
+</body>
+</html>
