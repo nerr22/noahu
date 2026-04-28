@@ -40,7 +40,7 @@
       '<li><a href="' + absFromSiteRoot('projects.html') + '" data-nav="projects">Projects</a></li>' +
       '<li><a href="' + absFromSiteRoot('blog/index.html') + '" data-nav="blog">Blog</a></li>' +
       '<li><a href="' + absFromSiteRoot('reading.html') + '" data-nav="reading">Reading</a></li>' +
-      '<li><a href="mailto:noah.u22@gmail.com" class="contact-link">Contact</a></li>' +
+      '<li><a href="mailto:noah@noahu.me" class="contact-link">Contact</a></li>' +
       '</ul></nav>'
     );
   }
@@ -48,8 +48,8 @@
   function footerHtml() {
     return (
       '<footer>' +
-      '<p>Boston, MA &nbsp;·&nbsp; Actually Health</p>' +
-      '<a href="mailto:noah.u22@gmail.com">noah.u22@gmail.com</a>' +
+      '<p>Boston, MA</p>' +
+      '<a href="mailto:noah.u22@gmail.com">noah@noahu.me</a>' +
       '</footer>'
     );
   }
